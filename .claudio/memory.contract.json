@@ -1,0 +1,282 @@
+{
+  "version": "1",
+  "workspaceId": "3d1da195a6c761be",
+  "workspaceName": "uniquest-ai",
+  "enabled": true,
+  "updatedAt": "2026-11-16T13:11:09.415Z",
+  "detectedStack": {
+    "languages": [
+      "Java",
+      "JavaScript/TypeScript"
+    ],
+    "frameworks": [
+      "Spring",
+      "React"
+    ],
+    "packageManager": "maven",
+    "uiLibraries": [],
+    "orm": [],
+    "authLibraries": [],
+    "validationLibraries": [],
+    "paymentLibraries": [],
+    "testTools": [],
+    "scripts": {
+      "frontend/start": "react-scripts start",
+      "frontend/build": "react-scripts build",
+      "frontend/test": "react-scripts test",
+      "frontend/eject": "react-scripts eject"
+    },
+    "importantDirs": [
+      "backend",
+      "frontend"
+    ],
+    "sensitiveFiles": []
+  },
+  "sections": {
+    "stack": [],
+    "packageManager": [],
+    "architectureRules": [],
+    "codingConventions": [],
+    "sensitiveFiles": [
+      {
+        "id": "3e84d8fcd96a298d",
+        "text": "Login flow: frontend/src/components/Login.js",
+        "kind": "risk",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "evidence": {
+          "file": "frontend/src/components/Login.js"
+        },
+        "lastVerifiedAt": "2026-11-16T13:11:09.414Z"
+      },
+      {
+        "id": "bcecfc0234f4e94e",
+        "text": "Dashboard area: frontend/src/components/Dashboard.js",
+        "kind": "risk",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "evidence": {
+          "file": "frontend/src/components/Dashboard.js"
+        },
+        "lastVerifiedAt": "2026-11-16T13:11:09.414Z"
+      }
+    ],
+    "forbiddenActions": [],
+    "allowedCommands": [
+      {
+        "id": "3c78eb80eb9adaf4",
+        "text": "npm run start (in frontend) -> react-scripts start",
+        "kind": "command",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "evidence": {
+          "file": "frontend/package.json"
+        },
+        "appliesTo": [
+          "frontend"
+        ],
+        "lastVerifiedAt": "2026-11-16T13:11:09.415Z"
+      },
+      {
+        "id": "a4756f4a721a6a7a",
+        "text": "npm run build (in frontend) -> react-scripts build",
+        "kind": "command",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "evidence": {
+          "file": "frontend/package.json"
+        },
+        "appliesTo": [
+          "frontend"
+        ],
+        "lastVerifiedAt": "2026-11-16T13:11:09.415Z"
+      },
+      {
+        "id": "f5dc9dc1e45feb5d",
+        "text": "npm run test (in frontend) -> react-scripts test",
+        "kind": "command",
+        "source": "repo_detected",
+        "confidence": "confirmed",
+        "scope": "workspace",
+        "evidence": {
+          "file": "frontend/package.json"
+        },
+        "appliesTo": [
+          "frontend"
+        ],
+        "lastVerifiedAt": "2026-11-16T13:11:09.415Z"
+      }
+    ],
+    "businessRules": [],
+    "integrationRules": [],
+    "testingExpectations": [],
+    "agentInstructions": [],
+    "openQuestions": []
+  },
+  "packages": [
+    {
+      "path": "backend",
+      "name": "backend",
+      "detectedStack": {
+        "languages": [
+          "Java"
+        ],
+        "frameworks": [
+          "Spring"
+        ],
+        "packageManager": "maven",
+        "uiLibraries": [],
+        "orm": [],
+        "authLibraries": [],
+        "validationLibraries": [],
+        "paymentLibraries": [],
+        "testTools": [],
+        "scripts": {},
+        "importantDirs": [],
+        "sensitiveFiles": []
+      },
+      "items": [
+        {
+          "id": "backend:fact:JVM project detected (Spring).",
+          "text": "JVM project detected (Spring).",
+          "kind": "fact",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "backend/pom.xml"
+          },
+          "appliesTo": [
+            "backend"
+          ],
+          "lastVerifiedAt": "2026-11-16T13:11:09.412Z"
+        },
+        {
+          "id": "backend:command:mvn test / mvn package / mvn verify.",
+          "text": "mvn test / mvn package / mvn verify.",
+          "kind": "command",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "backend/pom.xml"
+          },
+          "appliesTo": [
+            "backend"
+          ],
+          "lastVerifiedAt": "2026-11-16T13:11:09.412Z"
+        }
+      ]
+    },
+    {
+      "path": "frontend",
+      "name": "uniquest-frontend",
+      "detectedStack": {
+        "languages": [
+          "JavaScript/TypeScript"
+        ],
+        "frameworks": [
+          "React"
+        ],
+        "packageManager": "npm",
+        "uiLibraries": [],
+        "orm": [],
+        "authLibraries": [],
+        "validationLibraries": [],
+        "paymentLibraries": [],
+        "testTools": [],
+        "scripts": {
+          "start": "react-scripts start",
+          "build": "react-scripts build",
+          "test": "react-scripts test",
+          "eject": "react-scripts eject"
+        },
+        "importantDirs": [
+          "src"
+        ],
+        "sensitiveFiles": []
+      },
+      "items": [
+        {
+          "id": "frontend:fact:Project name: uniquest-frontend",
+          "text": "Project name: uniquest-frontend",
+          "kind": "fact",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "frontend/package.json"
+          },
+          "appliesTo": [
+            "frontend"
+          ],
+          "lastVerifiedAt": "2026-11-16T13:11:09.413Z"
+        },
+        {
+          "id": "frontend:fact:Framework detected: React.",
+          "text": "Framework detected: React.",
+          "kind": "fact",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "frontend/package.json"
+          },
+          "appliesTo": [
+            "frontend"
+          ],
+          "lastVerifiedAt": "2026-11-16T13:11:09.413Z"
+        },
+        {
+          "id": "frontend:command:npm run start -> react-scripts start",
+          "text": "npm run start -> react-scripts start",
+          "kind": "command",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "frontend/package.json"
+          },
+          "appliesTo": [
+            "frontend"
+          ],
+          "lastVerifiedAt": "2026-11-16T13:11:09.413Z"
+        },
+        {
+          "id": "frontend:command:npm run build -> react-scripts build",
+          "text": "npm run build -> react-scripts build",
+          "kind": "command",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "frontend/package.json"
+          },
+          "appliesTo": [
+            "frontend"
+          ],
+          "lastVerifiedAt": "2026-11-16T13:11:09.413Z"
+        },
+        {
+          "id": "frontend:command:npm run test -> react-scripts test",
+          "text": "npm run test -> react-scripts test",
+          "kind": "command",
+          "source": "repo_detected",
+          "confidence": "confirmed",
+          "scope": "package",
+          "evidence": {
+            "file": "frontend/package.json"
+          },
+          "appliesTo": [
+            "frontend"
+          ],
+          "lastVerifiedAt": "2026-11-16T13:11:09.413Z"
+        }
+      ]
+    }
+  ]
+}
